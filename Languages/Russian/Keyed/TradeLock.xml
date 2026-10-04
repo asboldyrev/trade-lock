@@ -2,4 +2,7 @@
 <LanguageData>
   <TradeLock.AllowTrading>Разрешить торговлю</TradeLock.AllowTrading>
   <TradeLock.AllowTradingDesc>Определяет, будут ли предметы из этого хранилища предлагаться прибывшим наземным торговцам. Отключите, чтобы исключить это хранилище из списка товаров для торговли.</TradeLock.AllowTradingDesc>
+  <TradeLock.SettingsCategory>Trade Lock</TradeLock.SettingsCategory>
+  <TradeLock.ShowTradeToggle>Показывать переключатель торговли</TradeLock.ShowTradeToggle>
+  <TradeLock.ShowTradeToggleDesc>Показывать переключатель «Разрешить торговлю» при выборе складских зон и хранилищ.</TradeLock.ShowTradeToggleDesc>
 </LanguageData>
