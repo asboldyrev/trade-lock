@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Trade Lock</name>
+  <author>Andrew Boldyrev</author>
+  <packageId>asboldyrev.tradelock</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>Exclude selected stockpiles and storage buildings from trade with visiting ground traders.
+
+Features:
+- Per-storage trade toggle
+- Multi-selection support
+- Save-game persistence
+- Adaptive Storage Framework compatibility
+- English and Russian localization
+
+Orbital trading and player caravan loading are intentionally left unchanged.</description>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>Ludeon.RimWorld</li>
+    <li>adaptive.storage.framework</li>
+  </loadAfter>
+</ModMetaData>
