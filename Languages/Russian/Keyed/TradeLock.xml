@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <TradeLock.AllowTrading>Разрешить торговлю</TradeLock.AllowTrading>
+  <TradeLock.AllowTradingDesc>Определяет, будут ли предметы из этого хранилища предлагаться прибывшим наземным торговцам. Отключите, чтобы исключить это хранилище из списка товаров для торговли.</TradeLock.AllowTradingDesc>
+</LanguageData>
