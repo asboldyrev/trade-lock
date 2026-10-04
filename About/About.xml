@@ -6,7 +6,16 @@
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
-  <description>Exclude selected stockpiles and storage buildings from trade with visiting ground traders.</description>
+  <description>Exclude selected stockpiles and storage buildings from trade with visiting ground traders.
+
+Features:
+- Per-storage trade toggle
+- Multi-selection support
+- Save-game persistence
+- Adaptive Storage Framework compatibility
+- English and Russian localization
+
+Orbital trading and player caravan loading are intentionally left unchanged.</description>
   <modDependencies>
     <li>
       <packageId>brrainz.harmony</packageId>
