@@ -1,30 +1,49 @@
 # Trade Lock
 
-A RimWorld 1.6 QoL mod that lets you exclude selected storage from trade with visiting ground traders.
+Trade Lock is a RimWorld 1.6 QoL mod that lets you exclude selected storage from trade with visiting ground traders.
 
-## Current scope
+## Features
 
-- Vanilla stockpile zones.
-- Vanilla `Building_Storage` buildings (including shelves).
-- Adaptive Storage Framework storage and mods based on it, without hard-coded defNames.
+- Toggle trade availability per stockpile or storage building.
+- Supports vanilla stockpile zones and vanilla storage buildings.
+- Works with Adaptive Storage Framework through RimWorld's normal storage APIs, without hard-coded defNames.
+- Multi-select several storage buildings or stockpiles and change them together.
+- Trade lock state is saved with the game.
+- Optional setting to hide the Trade Lock gizmo.
 - English and Russian localization.
-- Save-game persistence.
-- Ground traders only. Orbital trading and player caravan loading are intentionally untouched.
+- Ground traders only: orbital trading and player caravan loading are intentionally unchanged.
 
-## Compatibility targets
+## Compatibility
 
-The initial implementation is designed to support:
+Verified architecture targets:
 
+- Vanilla stockpile zones
+- Vanilla shelves / `Building_Storage`
+- Adaptive Storage Framework
 - [sbz] Bookcase
 - [sbz] Fridge
 - [sbz] Neat Storage
-- Adaptive Storage Framework
 
-ASF storage inherits from RimWorld's `Building_Storage`, so Trade Lock integrates through the normal storage/slot-group API rather than checking individual mod definitions.
+Trade Lock integrates through `Building_Storage`, `SlotGroup` and `ThingOwner`, so many other storage mods should work automatically.
+
+## How it works
+
+Storage is trade-enabled by default.
+
+Select a stockpile or storage building and disable:
+
+- **Allow trading**
+- **Разрешить торговлю**
+
+Items stored there are removed from the goods offered to visiting ground traders.
+
+The lock belongs to the storage, not to the item. Moving an item from a locked storage to an unlocked one immediately makes it available for trade again.
 
 ## Building
 
-The project intentionally does not redistribute RimWorld or Harmony assemblies. Point the build at your local copies:
+The project does not redistribute RimWorld or Harmony assemblies.
+
+Set local reference paths:
 
 ```bash
 export RIMWORLD_MANAGED_DIR="/path/to/RimWorld/RimWorldLinux_Data/Managed"
@@ -35,10 +54,16 @@ dotnet build Source/TradeLock/TradeLock.csproj -c Release
 
 On Windows, `RIMWORLD_MANAGED_DIR` normally points to `RimWorldWin64_Data/Managed`.
 
-The build writes `TradeLock.dll` to `1.6/Assemblies/`.
+The build writes:
 
-## Behavior
+```text
+1.6/Assemblies/TradeLock.dll
+```
 
-Storage is trade-enabled by default. Select a stockpile or storage building and toggle **Allow trading** / **Разрешить торговлю** off to hide its contents from visiting ground traders.
+## Development
 
-The lock belongs to the storage, not to the item. Moving an item from a locked storage to an unlocked one makes it available for trade again.
+See `docs/TESTING.md` for the current manual regression checklist.
+
+## License
+
+MIT.
