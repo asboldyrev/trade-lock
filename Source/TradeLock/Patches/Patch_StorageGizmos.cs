@@ -15,6 +15,11 @@ internal static class Patch_BuildingStorage_GetGizmos
             yield return gizmo;
         }
 
+        if (TradeLockMod.Settings?.showTradeToggle == false)
+        {
+            yield break;
+        }
+
         if (__instance.Spawned && __instance.Faction == Faction.OfPlayer)
         {
             yield return TradeLockGizmoUtility.For(__instance);
@@ -30,6 +35,11 @@ internal static class Patch_Stockpile_GetGizmos
         foreach (var gizmo in __result)
         {
             yield return gizmo;
+        }
+
+        if (TradeLockMod.Settings?.showTradeToggle == false)
+        {
+            yield break;
         }
 
         yield return TradeLockGizmoUtility.For(__instance);
