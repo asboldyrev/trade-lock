@@ -2,4 +2,7 @@
 <LanguageData>
   <TradeLock.AllowTrading>Allow trading</TradeLock.AllowTrading>
   <TradeLock.AllowTradingDesc>Controls whether items stored here are offered to visiting ground traders. Disable this to keep this storage out of ground-trader trade lists.</TradeLock.AllowTradingDesc>
+  <TradeLock.SettingsCategory>Trade Lock</TradeLock.SettingsCategory>
+  <TradeLock.ShowTradeToggle>Show storage trade toggle</TradeLock.ShowTradeToggle>
+  <TradeLock.ShowTradeToggleDesc>Show the Allow trading toggle when selecting stockpiles and storage buildings.</TradeLock.ShowTradeToggleDesc>
 </LanguageData>
