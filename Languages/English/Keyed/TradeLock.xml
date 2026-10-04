@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <TradeLock.AllowTrading>Allow trading</TradeLock.AllowTrading>
+  <TradeLock.AllowTradingDesc>Controls whether items stored here are offered to visiting ground traders. Disable this to keep this storage out of ground-trader trade lists.</TradeLock.AllowTradingDesc>
+</LanguageData>
