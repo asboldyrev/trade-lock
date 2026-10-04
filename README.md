@@ -24,15 +24,18 @@ ASF storage inherits from RimWorld's `Building_Storage`, so Trade Lock integrate
 
 ## Building
 
-Set `RIMWORLD_DIR` to the RimWorld installation directory and build:
+The project intentionally does not redistribute RimWorld or Harmony assemblies. Point the build at your local copies:
 
 ```bash
+export RIMWORLD_MANAGED_DIR="/path/to/RimWorld/RimWorldLinux_Data/Managed"
+export HARMONY_DLL="/path/to/0Harmony.dll"
+
 dotnet build Source/TradeLock/TradeLock.csproj -c Release
 ```
 
-The project writes `TradeLock.dll` to `1.6/Assemblies/`.
+On Windows, `RIMWORLD_MANAGED_DIR` normally points to `RimWorldWin64_Data/Managed`.
 
-On Linux, if the game directory layout differs from the Windows default paths in the project file, pass the reference paths or adjust `RimWorldDir`/HintPath values locally.
+The build writes `TradeLock.dll` to `1.6/Assemblies/`.
 
 ## Behavior
 
